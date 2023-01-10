@@ -7,7 +7,7 @@ function App() {
 
   useEffect(() => {
     previousInputValue.current = inputValue;
-  }, [inputValue]);
+  }, [inputValue]); //only run effect when inputValue changes
 
   return (
     <>
