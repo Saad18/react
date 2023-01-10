@@ -6,9 +6,11 @@ function App() {
   const previousInputValue = useRef("");
 
   useEffect(() => {
+    console.log('1');
     previousInputValue.current = inputValue;
   }, [inputValue]);
 
+  console.log('2');
   return (
     <>
       <input
