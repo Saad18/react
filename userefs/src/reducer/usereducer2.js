@@ -19,12 +19,15 @@ const reducer = (state, action) => {
         case "COMPLETE":
             return state.map((todo) => {
                 if (todo.id === action.id) {
+                    //console.log(todo.id);
                     return { ...todo, complete: !todo.complete };
                 } else {
+                    //console.log(todo);
                     return todo;
                 }
             });
         default:
+            console.log(state);
             return state;
     }
 };
@@ -43,7 +46,7 @@ function Todos() {
                     <label>
                         <input
                             type="checkbox"
-                            //checked={todo.complete}
+                            checked={todo.complete}
                             onChange={() => handleComplete(todo)}
                         />
                         {todo.title}
