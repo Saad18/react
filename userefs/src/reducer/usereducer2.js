@@ -20,14 +20,17 @@ const reducer = (state, action) => {
             return state.map((todo) => {
                 if (todo.id === action.id) {
                     //console.log(todo.id);
+                    //console.log(todo);
+                    //console.log(!todo.complete);
+                    /* ...todo means call rest of the item of selected array like id and title */
+                    //console.log({ ...todo, complete: !todo.complete });
                     return { ...todo, complete: !todo.complete };
                 } else {
-                    //console.log(todo);
+                    console.log(todo);
                     return todo;
                 }
             });
         default:
-            console.log(state);
             return state;
     }
 };
