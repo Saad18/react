@@ -43,7 +43,7 @@ function Todos() {
                     <label>
                         <input
                             type="checkbox"
-                            checked={todo.complete}
+                            //checked={todo.complete}
                             onChange={() => handleComplete(todo)}
                         />
                         {todo.title}
