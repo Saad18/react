@@ -9,8 +9,8 @@ const App = () => {
   };
   const addTodo = useCallback(() => {
     setTodos((t) => [...t, "New Todo"]);
-    // eslint-disable-next-line
-  }, [todos]);
+    
+  }, []);
 
 
   return (
