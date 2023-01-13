@@ -1,6 +1,5 @@
-import { useState } from "react";
+import { useState, useCallback } from "react";
 import Todos from "./hook/Todos";
-
 const App = () => {
   const [count, setCount] = useState(0);
   const [todos, setTodos] = useState([]);
@@ -8,9 +7,11 @@ const App = () => {
   const increment = () => {
     setCount((c) => c + 1);
   };
-  const addTodo = () => {
+  const addTodo = useCallback(() => {
     setTodos((t) => [...t, "New Todo"]);
-  };
+    // eslint-disable-next-line
+  }, [todos]);
+
 
   return (
     <>
