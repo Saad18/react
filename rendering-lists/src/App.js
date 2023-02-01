@@ -1,9 +1,9 @@
 import { people } from "./components/data";
 import { getImageUrl } from "./components/utils";
 function App() {
-  const chemists = people.filter(person =>
-    person.profession === 'chemist'
-  );
+  const chemists = people.filter((person) => { 
+    return person.profession === 'chemist'
+});
   const listItem = chemists.map(person =>
     <li>
       <img
